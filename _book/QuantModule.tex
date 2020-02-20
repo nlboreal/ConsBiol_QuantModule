@@ -1,0 +1,251 @@
+\documentclass[]{book}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+\fi
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\usepackage{hyperref}
+\hypersetup{unicode=true,
+            pdftitle={Conservation Biology - Quantitative Methods Module},
+            pdfauthor={Yolanda Wiersma},
+            pdfborder={0 0 0},
+            breaklinks=true}
+\urlstyle{same}  % don't use monospace font for urls
+\usepackage{natbib}
+\bibliographystyle{apalike}
+\usepackage{longtable,booktabs}
+\usepackage{graphicx,grffile}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+\IfFileExists{parskip.sty}{%
+\usepackage{parskip}
+}{% else
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{5}
+% Redefines (sub)paragraphs to behave more like sections
+\ifx\paragraph\undefined\else
+\let\oldparagraph\paragraph
+\renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+\let\oldsubparagraph\subparagraph
+\renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+
+%%% Use protect on footnotes to avoid problems with footnotes in titles
+\let\rmarkdownfootnote\footnote%
+\def\footnote{\protect\rmarkdownfootnote}
+
+%%% Change title format to be more compact
+\usepackage{titling}
+
+% Create subtitle command for use in maketitle
+\providecommand{\subtitle}[1]{
+  \posttitle{
+    \begin{center}\large#1\end{center}
+    }
+}
+
+\setlength{\droptitle}{-2em}
+
+  \title{Conservation Biology - Quantitative Methods Module}
+    \pretitle{\vspace{\droptitle}\centering\huge}
+  \posttitle{\par}
+    \author{Yolanda Wiersma}
+    \preauthor{\centering\large\emph}
+  \postauthor{\par}
+      \predate{\centering\large\emph}
+  \postdate{\par}
+    \date{2020-02-20}
+
+\usepackage{booktabs}
+
+\begin{document}
+\maketitle
+
+{
+\setcounter{tocdepth}{1}
+\tableofcontents
+}
+\hypertarget{quantitative-methods-overview}{%
+\chapter{Quantitative Methods Overview}\label{quantitative-methods-overview}}
+
+Biology, including ecology and conservation, is becoming increasingly quantitative. Familiarity with a range of statistical tools (frequentist, multivariate, Bayesian) is expected. Many researchers draw on quantitative methods; whether it is process or mathematical modelling, programming, bioinformatics, or bioeconomic analyses. We will only touch on key concepts in quantitative methods; in-depth training would require multiple full-semester courses. Here, we will carry out a few simple exercise that mimics some of the quantitative skills that you need to be a successful ecologist. These are:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Use R!
+\item
+  Manage data sets
+\item
+  Plot data
+\item
+  Fit a model to data
+\end{enumerate}
+
+In this module there will be a small assignment with each of the above objectives. These are detailed below along with the percentage of your final grade that this is worth (the entire module is worth 10\% of your final mark).
+
+\#\#What to hand in (as a single PDF file please!)
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Written review of the first year guide. How useful was it to help you work through this module?
+\item
+  A short document that answers all the questions posed throughout this assignment (they are in italics)
+\item
+  Copies of the final version of all plots created (remember you can export these as image files which you can then paste in Word). Convert the Word document to a PDF file and upload it to the Dropbox folder in Brightspace.
+\end{enumerate}
+
+\hypertarget{using-r}{%
+\chapter{Using R}\label{using-r}}
+
+We're going to work exclusively with R in this module. Most of you have some R/R studio experience. Dr.~Amy Hurford and I, together with Dr.~Hurford's graduate student, have prepared a simple ``using R'' manual that we are planning to introduce to first year Biology students in the near future. This manual is available \href{https://ahurford.github.io/quantitative-training-guide/}{here} (note it is still very much a DRAFT and thus has notes between the authors in the document. Please ignore these).
+
+\emph{Your assignment}: Provide a written review of the draft manual that gives Dr.~Hurford and I some constructive suggestions on how to improve this manual to make it as maximally useful for first year students as possible. You do not need to highlight typos or any residual ``notes'' we've left each other, rather focus on a ``big picture'' evaluation of the document. This does not need to be long. It can be as short as a paragraph/half-page of point form suggestions up to a maximum of a full page typed-double spaces (apprx. 250 words).
+
+\textbf{THIS IS WORTH 10\% OF YOUR MARK FOR THIS MODULE.}
+
+\hypertarget{manage-a-data-set}{%
+\chapter{Manage a data set}\label{manage-a-data-set}}
+
+R is really useful for managing data. Here are some commands that come in handy frequently. The reference to ``iris'' is the built in ``iris'' data set that comes automatically when you install the baseR package. Try out these commands by typing the code below into the console. \emph{Write down what happens when you enter each command.}
+
+\texttt{data("iris")}
+
+\texttt{head(iris)}
+
+\texttt{dim(iris)}
+
+\texttt{str(iris)}
+
+\texttt{class(iris)}
+
+Let's say you want to create a new data frame with only the data for flowers with a petal width greater than 0.3. Here's what the command would look like:
+
+\texttt{lg.petals\ \textless{}-\ subset(iris,\ Petal.Width\ \textgreater{}\ 0.3)}
+
+\emph{How can you confirm this new data frame is a subset of the larger one?}
+
+\emph{Your assignmnet} Create new data frames from the ``iris'' data set that contain the following. Provide a copy of the code that you used to generate each new data frame and tell me how many rows are in each new data frame. If you get stuck, start with the first year guide! Then try the ``help'' files (the guide includes a section on getting help). \emph{For each of these, tell me what the dimensions of each new data frame is.}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  A data frame with only flowers with Sepal Length less than 4.5
+\item
+  A data frame with only flowers with Sepal Width greater than 3.3
+\item
+  A data frame with only the species ``setosa'' (Warning - the ``species'' field is factor data, which means you need to treat it a little differently! Use the help files, or Google it!)
+\item
+  \textbf{For graduate students (optional for keen undergraduates}): Create a data frame of all species ``setosa'' that have Petal.Width great than 0.3. \emph{Tell me how big this data frame is.}
+\end{enumerate}
+
+\textbf{THIS IS WORTH 25\% OF YOUR MARK FOR THIS MODULE.}
+
+\hypertarget{plotting-data}{%
+\chapter{Plotting Data}\label{plotting-data}}
+
+The first year help file has a section on how to plot data when you have x and y vectors. Use this to make a plot of the iris data that shows Sepal Length vs.~Sepal Width. I've provided code to create the x and y vectors below. Remember to add axis labels!
+
+\texttt{x\ \textless{}-\ iris\$Sepal.Width}
+\texttt{y\ \textless{}-\ iris\$Sepal.Length}
+
+\emph{Your assignment} Modify the graph you created above to show the three species with different symbols. There are different ways you can do this (\textbf{HINT} look at the goldfish data example in the first year help manual). Alternatively, you can use the \texttt{pch} (for symbol style) and \texttt{bg} (for background colour) arguments to specify three colours for the species. Here's a snippet of the code that will assign the colours red, green and blue to the 3 factors in the data set: \texttt{pch\ =\ 21,\ bg\ =\ c("red",\ "green",\ "blue")} \textbf{HINT} insert this code into the \texttt{plot}function.
+
+To make a legend use this code: \texttt{legend(2,\ 7.5,\ pch=\ 16,\ leg.text,\ col\ =\ c("red",\ "green",\ "blue"))}. Experiment with changing the variables to see what happens!
+
+\emph{For graduate students (optional for keen undergraduates}): Make a boxplot of sepal lengths by species. \textbf{HINT} you need to insert a formula of the form \texttt{y\textasciitilde{}grp} where \texttt{y} is a numerical vector of the data you want split into the boxplots and \texttt{grp} is the groupings you want to show on the x-axis (i.e., the factor data). Don't forget meaningful axis labels!
+
+\textbf{THIS IS WORTH 30\% OF YOUR MARK FOR THIS MODULE.}
+
+\hypertarget{fitting-a-model}{%
+\chapter{Fitting a model}\label{fitting-a-model}}
+
+Let's say you want to test whether there is a statical relationship between sepal length and sepal width in the ``Versicolor'' Species of iris. We suspect it is a linear fit, so we'll just fit a linear model of the form y = a(x) + b, where ``y'' is sepal length, x is sepal width, a is the coefficient for the slope of the line, and b is the intercept.
+
+We'll use the glm (generalized linear model) not the ls (least squares) model, since it allows for better post-hoc model evalution. To do that we need to load and install the package ``vegan''.
+
+\emph{Your assignment}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Install the package ``vegan''. **HINT* Refer to the instructions on using packages in the first-year R guide.
+\item
+  Subset the data frame ``iris'' to create a new data frame that only has the ``Versicolor'' species (\textbf{HINT} you already did somehting like this, but for a different species in step 3 of the ``Managing a data set'' part of the assignment).
+\item
+  \emph{Inspect new data frame and write down how many rows are in it.}
+\item
+  Fit a model by writing code that tells R to create an object called \texttt{Sepal.Model} using the function \texttt{glm}. Write the code as below, but where I have things inside \textless{}\textgreater{} replace with correct parameters from your new data frame. \emph{Give a copy of the code when you hand in the work}
+\end{enumerate}
+
+\texttt{Sepal.Model\ \textless{}-\ glm(\textless{}y\textgreater{}\ \textasciitilde{}\ \textless{}x\textgreater{},\ data\ =\ \textless{}new\ data\ frame)}
+
+If you execute this code and nothing happens, then it has worked. You can see a summary of the model fit with the command \texttt{summary(Sepal.Model)}
+
+\emph{Is there a significant relationship between Sepal Length and Sepal width? What's the coefficeint?}
+
+It's always important to check that your model doesn't violate assmptions of normality. You can assess this by inspecting the ratio of the null deviance to residual deviance in the model summary.
+
+You can also inspect the model by plotting the model fits. Do this with the code \texttt{plot(Speal.Model)}. You will see plots of 1) residuals vs.~fitted data; 2) a Q-Q plot; 3) Scale-location plot; 4) Residulas vs.~Leverage.
+
+Click the links here to read about how to interpret the \href{https://stats.stackexchange.com/questions/76226/interpreting-the-residuals-vs-fitted-values-plot-for-verifying-the-assumptions}{Residuals vs Fitted plot}; the \href{https://stats.stackexchange.com/questions/101274/how-to-interpret-a-qq-plot}{Q-Q plot}. If your model does not meet the assumptions of normality, you may need to use a different error strucutre (e.g., Poisson, logNormal). Going into the whys and hows of that is beyond the scope of this course. The fit here is slightly skewed but the null and residual deviances are small enought that we can accept this fit.
+
+Of course, you probably want to plot a line of best fit! To do that, we create a range of values for ``x'' (Sepal Width) that matches the range of the actual data. It's helpful to plot the data first.
+
+So\ldots{} make a scatter plot with ``Sepal Width'' on the x-axis and ``Sepal Length'' on the y-axis. \textbf{HINT} refer back to the ``Plotting Data'' part of the module.
+
+Note, you could also query the data to see what the range of real x values are by typing \texttt{range(iris\$Sepal.Width)}.
+
+Then specify a range of values that fall within this for fitting the model. We'll create a sequence called ``xvalues'' that ranges between 2 and 5 in increments of 0.1 using this code \texttt{xvalues\ \textless{}-\ seq(2,5,\ 0.1)}. \textbf{aside} you've probably been ignoring the other windows in R studio, but notice how the ``xvalues'' popped up in the ``Environment'' window and shows you the length of the vector and the first values.
+
+Then we use the \texttt{predict} function to create the model for these ``xvalues'' we just created, based on the ``Sepal.model'' you built with the glm.
+
+\texttt{yvalues\ \textless{}-\ predict(Sepal.Model,\ list(Sepal.Width\ =\ xvalues),\ type="response")}
+
+Then simply add the line of fit to your plot with \texttt{lines(xvalues,\ yvalues).}
+
+\textbf{THIS IS WORTH 35\% OF YOUR MARK FOR THIS MODULE.}
+
+\hypertarget{other-sources-of-info}{%
+\chapter{Other sources of info}\label{other-sources-of-info}}
+
+R ``cheat sheets'' can be really handy. See this \href{https://rstudio.com/wp-content/uploads/2016/05/base-r.pdf}{link} for an example cheat sheet for baseR. There are other cheat sheet for other R packages. For example, I wrote this document using Rmarkdown which has a cheat sheet \href{https://rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf}{here}.
+
+If you want more detailed help using R than what's in the first year guide provided as part of this module, check out ``The Student's Guide to R'' by Nochlas Horton, Randall Pruim and Daniel Kaplan. It's availalbe online \href{https://cran.r-project.org/doc/contrib/Horton+Pruim+Kaplan_MOSAIC-StudentGuide.pdf}{here}
+
+\bibliography{book.bib,packages.bib}
+
+
+\end{document}

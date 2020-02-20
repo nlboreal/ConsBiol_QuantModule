@@ -1,0 +1,11 @@
+--- 
+title: "Conservation Biology - Quantitative Methods Module"
+author: "Yolanda Wiersma"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+documentclass: book
+bibliography: [book.bib, packages.bib]
+biblio-style: apalike
+link-citations: yes
+description: "This is the instructions on what to hand in as part of the Quantitative Methods Module in BIOL 4651/7794 (Conservation Biology II: Conservation in Practice)."
+---

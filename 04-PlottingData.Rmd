@@ -1,0 +1,14 @@
+# Plotting Data
+
+The first year help file has a section on how to plot data when you have x and y vectors. Use this to make a plot of the iris data that shows Sepal Length vs. Sepal Width. I've provided code to create the x and y vectors below. Remember to add axis labels!
+
+```x <- iris$Sepal.Width```
+```y <- iris$Sepal.Length```
+
+*Your assignment* Modify the graph you created above to show the three species with different symbols. There are different ways you can do this (**HINT** look at the goldfish data example in the first year help manual). Alternatively, you can use the ```pch``` (for symbol style) and ```bg``` (for background colour) arguments to specify three colours for the species.  Here's a snippet of the code that will assign the colours red, green and blue to the 3 factors in the data set: ```pch = 21, bg = c("red", "green", "blue")``` **HINT** insert this code into the ```plot```function.
+
+To make a legend use this code: ```legend(2, 7.5, pch= 16, leg.text, col = c("red", "green", "blue"))```. Experiment with changing the variables to see what happens!
+
+*For graduate students (optional for keen undergraduates*): Make a boxplot of sepal lengths by species. **HINT** you need to insert a formula of the form ```y~grp``` where ```y``` is a numerical vector of the data you want split into the boxplots and ```grp``` is the groupings you want to show on the x-axis (i.e., the factor data). Don't forget meaningful axis labels! 
+
+**THIS IS WORTH 30% OF YOUR MARK FOR THIS MODULE.**

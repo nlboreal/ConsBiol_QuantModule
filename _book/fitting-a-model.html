@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 5 Fitting a model | Conservation Biology - Quantitative Methods Module</title>
+  <meta name="description" content="This is the instructions on what to hand in as part of the Quantitative Methods Module in BIOL 4651/7794 (Conservation Biology II: Conservation in Practice)." />
+  <meta name="generator" content="bookdown 0.17 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 5 Fitting a model | Conservation Biology - Quantitative Methods Module" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="This is the instructions on what to hand in as part of the Quantitative Methods Module in BIOL 4651/7794 (Conservation Biology II: Conservation in Practice)." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 5 Fitting a model | Conservation Biology - Quantitative Methods Module" />
+  
+  <meta name="twitter:description" content="This is the instructions on what to hand in as part of the Quantitative Methods Module in BIOL 4651/7794 (Conservation Biology II: Conservation in Practice)." />
+  
+
+<meta name="author" content="Yolanda Wiersma" />
+
+
+<meta name="date" content="2020-02-20" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="plotting-data.html"/>
+<link rel="next" href="other-sources-of-info.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">A Minimal Book Example</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="quantitative-methods-overview.html"><a href="quantitative-methods-overview.html"><i class="fa fa-check"></i><b>1</b> Quantitative Methods Overview</a></li>
+<li class="chapter" data-level="2" data-path="using-r.html"><a href="using-r.html"><i class="fa fa-check"></i><b>2</b> Using R</a></li>
+<li class="chapter" data-level="3" data-path="manage-a-data-set.html"><a href="manage-a-data-set.html"><i class="fa fa-check"></i><b>3</b> Manage a data set</a></li>
+<li class="chapter" data-level="4" data-path="plotting-data.html"><a href="plotting-data.html"><i class="fa fa-check"></i><b>4</b> Plotting Data</a></li>
+<li class="chapter" data-level="5" data-path="fitting-a-model.html"><a href="fitting-a-model.html"><i class="fa fa-check"></i><b>5</b> Fitting a model</a></li>
+<li class="chapter" data-level="6" data-path="other-sources-of-info.html"><a href="other-sources-of-info.html"><i class="fa fa-check"></i><b>6</b> Other sources of info</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Conservation Biology - Quantitative Methods Module</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="fitting-a-model" class="section level1">
+<h1><span class="header-section-number">Chapter 5</span> Fitting a model</h1>
+<p>Let’s say you want to test whether there is a statical relationship between sepal length and sepal width in the “Versicolor” Species of iris. We suspect it is a linear fit, so we’ll just fit a linear model of the form y = a(x) + b, where “y” is sepal length, x is sepal width, a is the coefficient for the slope of the line, and b is the intercept.</p>
+<p>We’ll use the glm (generalized linear model) not the ls (least squares) model, since it allows for better post-hoc model evalution. To do that we need to load and install the package “vegan”.</p>
+<p><em>Your assignment</em></p>
+<ol style="list-style-type: decimal">
+<li><p>Install the package “vegan”. **HINT* Refer to the instructions on using packages in the first-year R guide.</p></li>
+<li><p>Subset the data frame “iris” to create a new data frame that only has the “Versicolor” species (<strong>HINT</strong> you already did somehting like this, but for a different species in step 3 of the “Managing a data set” part of the assignment).</p></li>
+<li><p><em>Inspect new data frame and write down how many rows are in it.</em></p></li>
+<li><p>Fit a model by writing code that tells R to create an object called <code>Sepal.Model</code> using the function <code>glm</code>. Write the code as below, but where I have things inside &lt;&gt; replace with correct parameters from your new data frame. <em>Give a copy of the code when you hand in the work</em></p></li>
+</ol>
+<p><code>Sepal.Model &lt;- glm(&lt;y&gt; ~ &lt;x&gt;, data = &lt;new data frame)</code></p>
+<p>If you execute this code and nothing happens, then it has worked. You can see a summary of the model fit with the command <code>summary(Sepal.Model)</code></p>
+<p><em>Is there a significant relationship between Sepal Length and Sepal width? What’s the coefficeint?</em></p>
+<p>It’s always important to check that your model doesn’t violate assmptions of normality. You can assess this by inspecting the ratio of the null deviance to residual deviance in the model summary.</p>
+<p>You can also inspect the model by plotting the model fits. Do this with the code <code>plot(Speal.Model)</code>. You will see plots of 1) residuals vs. fitted data; 2) a Q-Q plot; 3) Scale-location plot; 4) Residulas vs. Leverage.</p>
+<p>Click the links here to read about how to interpret the <a href="https://stats.stackexchange.com/questions/76226/interpreting-the-residuals-vs-fitted-values-plot-for-verifying-the-assumptions">Residuals vs Fitted plot</a>; the <a href="https://stats.stackexchange.com/questions/101274/how-to-interpret-a-qq-plot">Q-Q plot</a>. If your model does not meet the assumptions of normality, you may need to use a different error strucutre (e.g., Poisson, logNormal). Going into the whys and hows of that is beyond the scope of this course. The fit here is slightly skewed but the null and residual deviances are small enought that we can accept this fit.</p>
+<p>Of course, you probably want to plot a line of best fit! To do that, we create a range of values for “x” (Sepal Width) that matches the range of the actual data. It’s helpful to plot the data first.</p>
+<p>So… make a scatter plot with “Sepal Width” on the x-axis and “Sepal Length” on the y-axis. <strong>HINT</strong> refer back to the “Plotting Data” part of the module.</p>
+<p>Note, you could also query the data to see what the range of real x values are by typing <code>range(iris$Sepal.Width)</code>.</p>
+<p>Then specify a range of values that fall within this for fitting the model. We’ll create a sequence called “xvalues” that ranges between 2 and 5 in increments of 0.1 using this code <code>xvalues &lt;- seq(2,5, 0.1)</code>. <strong>aside</strong> you’ve probably been ignoring the other windows in R studio, but notice how the “xvalues” popped up in the “Environment” window and shows you the length of the vector and the first values.</p>
+<p>Then we use the <code>predict</code> function to create the model for these “xvalues” we just created, based on the “Sepal.model” you built with the glm.</p>
+<p><code>yvalues &lt;- predict(Sepal.Model, list(Sepal.Width = xvalues), type="response")</code></p>
+<p>Then simply add the line of fit to your plot with <code>lines(xvalues, yvalues).</code></p>
+<p><strong>THIS IS WORTH 35% OF YOUR MARK FOR THIS MODULE.</strong></p>
+
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="plotting-data.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="other-sources-of-info.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["QuantModule.pdf", "QuantModule.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
