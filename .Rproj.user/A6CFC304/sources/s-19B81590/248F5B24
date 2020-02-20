@@ -1,0 +1,25 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1582223311683.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2700028764",
+    "id" : "248F5B24",
+    "lastKnownWriteTime" : 1582223559,
+    "last_content_update" : 1582223559289,
+    "path" : "~/BIOL4651/QuantMethodsModule/Module2020/ConsBiol_QuantModule/06-MoreInfo.Rmd",
+    "project_path" : "06-MoreInfo.Rmd",
+    "properties" : {
+        "cursorPosition" : "6,0",
+        "scrollLine" : "0"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 8,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}

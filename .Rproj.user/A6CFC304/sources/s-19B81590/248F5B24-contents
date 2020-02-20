@@ -1,0 +1,6 @@
+# Other sources of info
+
+R "cheat sheets" can be really handy. See this [LINK](https://rstudio.com/wp-content/uploads/2016/05/base-r.pdf) for an example cheat sheet for baseR. There are other cheat sheet for other R packages. For example, I wrote this document using Rmarkdown which has a cheat sheet [HERE](https://rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf).
+
+If you want more detailed help using R than what's in the first year guide provided as part of this module, check out "The Student's Guide to R" by Nochlas Horton, Randall Pruim and Daniel Kaplan. It's availalbe online [HERE](https://cran.r-project.org/doc/contrib/Horton+Pruim+Kaplan_MOSAIC-StudentGuide.pdf)
+

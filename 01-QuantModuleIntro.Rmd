@@ -10,11 +10,11 @@ Biology, including ecology and conservation, is becoming increasingly quantitati
 In this module there will be a small assignment with each of the above objectives. These are detailed below along with the percentage of your final grade that this is worth (the entire module is worth 10% of your final mark).
 
 
-##What to hand in (as a single PDF file please!)
+**What to hand in (as a single PDF file please!)**
 
-1. Written review of the first year guide. How useful was it to help you work through this module?
+1. Written review of the first-year guide. How useful was it to help you work through this module?
 
-2. A short document that answers all the questions posed throughout this assignment (they are in italics)
+2. A short document that answers all the questions posed throughout this assignment (they are all shown in italics)
 
-3. Copies of the final version of all plots created (remember you can export these as image files which you can then paste in Word). Convert the Word document to a PDF file and upload it to the Dropbox folder in Brightspace. 
+3. Copies of the final version of all plots created (remember you can export these as image files from the "Plots" pane in R Studio which you can then paste in Word). Convert the Word document to a PDF file and upload it to the Dropbox folder in Brightspace. 
 

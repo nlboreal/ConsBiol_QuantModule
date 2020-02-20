@@ -1,8 +1,7 @@
 # Using R
 
-We’re going to work exclusively with R in this module. Most of you have some R/R studio experience. Dr. Amy Hurford and I, together with Dr. Hurford’s graduate student, have prepared a simple “using R” manual that we are planning to introduce to first year Biology students in the near future. This manual is available [here](https://ahurford.github.io/quantitative-training-guide/) (note it is still very much a DRAFT and thus has notes between the authors in the document. Please ignore these). 
+We’re going to work exclusively with R in this module. Most of you have some R/R studio experience. Dr. Amy Hurford and I, together with Dr. Hurford’s graduate student, have prepared a simple “using R” manual that we are planning to introduce to first year Biology students in the near future. This manual is available by clicking [HERE](https://ahurford.github.io/quantitative-training-guide/) (note it is still very much a DRAFT and thus has notes between the authors in the document. Please ignore these). 
 
 *Your assignment*: Provide a written review of the draft manual that gives Dr. Hurford and I some constructive suggestions on how to improve this manual to make it as maximally useful for first year students as possible. You do not need to highlight typos or any residual “notes” we’ve left each other, rather focus on a “big picture” evaluation of the document. This does not need to be long. It can be as short as a paragraph/half-page of point form suggestions up to a maximum of a full page typed-double spaces (apprx. 250 words).  
 
 **THIS IS WORTH 10% OF YOUR MARK FOR THIS MODULE.**
-

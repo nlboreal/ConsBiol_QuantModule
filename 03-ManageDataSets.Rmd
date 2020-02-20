@@ -1,6 +1,6 @@
 # Manage a data set
 
-R is really useful for managing data. Here are some commands that come in handy frequently. The reference to "iris" is the built in "iris" data set that comes automatically when you install the baseR package. Try out these commands by typing the code below into the console. *Write down what happens when you enter each command.*
+R is really useful for managing data. Here are some commands that come in handy frequently. The reference to "iris" is the built-in "iris" data set that comes automatically when you install the baseR package. Try out these commands by typing the code below into the console. *Write down what happens when you enter each command.*
 
 ```data("iris")```
 
@@ -13,7 +13,7 @@ R is really useful for managing data. Here are some commands that come in handy 
 ```class(iris)```
 
 
-Let's say you want to create a new data frame with only the data for flowers with a petal width greater than 0.3. Here's what the command would look like:
+Let's say you want to create a new data frame from the "iris" data frame, but with only the data for flowers with a petal width greater than 0.3. Here's what the command would look like:
 
 ```lg.petals <- subset(iris, Petal.Width > 0.3) ```
 
@@ -21,7 +21,7 @@ Let's say you want to create a new data frame with only the data for flowers wit
 
 
 
-*Your assignmnet* Create new data frames from the "iris" data set that contain the following. Provide a copy of the code that you used to generate each new data frame and tell me how many rows are in each new data frame. If you get stuck, start with the first year guide! Then try the "help" files (the guide includes a section on getting help). *For each of these, tell me what the dimensions of each new data frame is.*
+*Your assignmnet* Create new data frames from the "iris" data set that contain the following. *Provide a copy of the code that you used to generate each new data frame and tell me how many rows are in each new data frame.* If you get stuck, start with the first year guide! Then try the "help" files (the guide includes a section on getting help). 
 
 1. A data frame with only flowers with Sepal Length less than 4.5
 2. A data frame with only flowers with Sepal Width greater than 3.3
@@ -30,5 +30,3 @@ Let's say you want to create a new data frame with only the data for flowers wit
 4. **For graduate students (optional for keen undergraduates**): Create a data frame of all species "setosa" that have Petal.Width great than 0.3. *Tell me how big this data frame is.*
 
 **THIS IS WORTH 25% OF YOUR MARK FOR THIS MODULE.**
-
-

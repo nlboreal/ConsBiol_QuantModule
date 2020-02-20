@@ -1,0 +1,25 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1582222981852.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3726154002",
+    "id" : "64E057FB",
+    "lastKnownWriteTime" : 1582223126,
+    "last_content_update" : 1582223126864,
+    "path" : "~/BIOL4651/QuantMethodsModule/Module2020/ConsBiol_QuantModule/04-PlottingData.Rmd",
+    "project_path" : "04-PlottingData.Rmd",
+    "properties" : {
+        "cursorPosition" : "16,51",
+        "scrollLine" : "9"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 6,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}

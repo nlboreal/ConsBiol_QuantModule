@@ -14,7 +14,7 @@ We'll use the glm (generalized linear model) not the ls (least squares) model, s
 
 4. Fit a model by writing code that tells R to create an object called ```Sepal.Model``` using the function ```glm```. Write the code as below, but where I have things inside <> replace with correct parameters from your new data frame. *Give a copy of the code when you hand in the work*
 
-```Sepal.Model <- glm(<y> ~ <x>, data = <new data frame)```
+```Sepal.Model <- glm(<y> ~ <x>, data = <new data frame>)```
 
 If you execute this code and nothing happens, then it has worked. You can see a summary of the model fit with the command ```summary(Sepal.Model)```
 
@@ -24,7 +24,7 @@ It's always important to check that your model doesn't violate assmptions of nor
 
 You can also inspect the model by plotting the model fits. Do this with the code ```plot(Speal.Model)```. You will see plots of 1) residuals vs. fitted data; 2) a Q-Q plot; 3) Scale-location plot; 4) Residulas vs. Leverage.
 
-Click the links here to read about how to interpret the [Residuals vs Fitted plot](https://stats.stackexchange.com/questions/76226/interpreting-the-residuals-vs-fitted-values-plot-for-verifying-the-assumptions); the [Q-Q plot](https://stats.stackexchange.com/questions/101274/how-to-interpret-a-qq-plot). If your model does not meet the assumptions of normality, you may need to use a different error strucutre (e.g., Poisson, logNormal). Going into the whys and hows of that is beyond the scope of this course. The fit here is slightly skewed but the null and residual deviances are small enought that we can accept this fit.
+Click the links here to read about how to interpret the [RESIDUALS vs FITTED PLOT](https://stats.stackexchange.com/questions/76226/interpreting-the-residuals-vs-fitted-values-plot-for-verifying-the-assumptions); the [Q-Q PLOT>](https://stats.stackexchange.com/questions/101274/how-to-interpret-a-qq-plot). If your model does not meet the assumptions of normality, you may need to use a different error strucutre (e.g., Poisson, logNormal). Going into the whys and hows of that is beyond the scope of this course. The fit here is slightly skewed but the null and residual deviances are small enought that we can accept this fit.
 
 Of course, you probably want to plot a line of best fit! To do that, we create a range of values for "x" (Sepal Width) that matches the range of the actual data. It's helpful to plot the data first.
 
@@ -32,7 +32,7 @@ So... make a scatter plot with "Sepal Width" on the x-axis and "Sepal Length" on
 
 Note, you could also query the data to see what the range of real x values are by typing ```range(iris$Sepal.Width)```.
 
-Then specify a range of values that fall within this for fitting the model. We'll create a sequence called "xvalues" that ranges between 2 and 5 in increments of 0.1 using this code ```xvalues <- seq(2,5, 0.1)```. **aside** you've probably been ignoring the other windows in R studio, but notice how the "xvalues" popped up in the "Environment" window and shows you the length of the vector and the first values.
+Then specify a range of values that fall within this for fitting the model. We'll create a sequence called "xvalues" that ranges between 2 and 5 in increments of 0.1 using this code ```xvalues <- seq(2,5, 0.1)```. **Aside** you've probably been ignoring the other windows in R studio, but notice how the "xvalues" popped up in the "Environment" window and shows you the length of the vector and the first values.
 
 Then we use the ```predict``` function to create the model for these "xvalues" we just created, based on the "Sepal.model" you built with the glm.
 

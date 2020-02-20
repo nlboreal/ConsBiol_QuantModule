@@ -97,16 +97,16 @@
             <section class="normal" id="section-">
 <div id="manage-a-data-set" class="section level1">
 <h1><span class="header-section-number">Chapter 3</span> Manage a data set</h1>
-<p>R is really useful for managing data. Here are some commands that come in handy frequently. The reference to “iris” is the built in “iris” data set that comes automatically when you install the baseR package. Try out these commands by typing the code below into the console. <em>Write down what happens when you enter each command.</em></p>
+<p>R is really useful for managing data. Here are some commands that come in handy frequently. The reference to “iris” is the built-in “iris” data set that comes automatically when you install the baseR package. Try out these commands by typing the code below into the console. <em>Write down what happens when you enter each command.</em></p>
 <p><code>data("iris")</code></p>
 <p><code>head(iris)</code></p>
 <p><code>dim(iris)</code></p>
 <p><code>str(iris)</code></p>
 <p><code>class(iris)</code></p>
-<p>Let’s say you want to create a new data frame with only the data for flowers with a petal width greater than 0.3. Here’s what the command would look like:</p>
+<p>Let’s say you want to create a new data frame from the “iris” data frame, but with only the data for flowers with a petal width greater than 0.3. Here’s what the command would look like:</p>
 <p><code>lg.petals &lt;- subset(iris, Petal.Width &gt; 0.3)</code></p>
 <p><em>How can you confirm this new data frame is a subset of the larger one?</em></p>
-<p><em>Your assignmnet</em> Create new data frames from the “iris” data set that contain the following. Provide a copy of the code that you used to generate each new data frame and tell me how many rows are in each new data frame. If you get stuck, start with the first year guide! Then try the “help” files (the guide includes a section on getting help). <em>For each of these, tell me what the dimensions of each new data frame is.</em></p>
+<p><em>Your assignmnet</em> Create new data frames from the “iris” data set that contain the following. <em>Provide a copy of the code that you used to generate each new data frame and tell me how many rows are in each new data frame.</em> If you get stuck, start with the first year guide! Then try the “help” files (the guide includes a section on getting help).</p>
 <ol style="list-style-type: decimal">
 <li>A data frame with only flowers with Sepal Length less than 4.5</li>
 <li>A data frame with only flowers with Sepal Width greater than 3.3</li>
