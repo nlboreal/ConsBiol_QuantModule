@@ -5,15 +5,15 @@
     "dirty" : false,
     "encoding" : "UTF-8",
     "folds" : "",
-    "hash" : "2972601146",
+    "hash" : "0",
     "id" : "CD02ADE2",
     "lastKnownWriteTime" : 1582223540,
     "last_content_update" : 1582223540059,
-    "path" : "~/BIOL4651/QuantMethodsModule/Module2020/ConsBiol_QuantModule/05-FittingModel.Rmd",
+    "path" : "~/BIOL4651/QuantMethodsModule/Module2020/QuantModuleR/ConsBiol_QuantModule/05-FittingModel.Rmd",
     "project_path" : "05-FittingModel.Rmd",
     "properties" : {
         "cursorPosition" : "26,235",
-        "scrollLine" : "21"
+        "scrollLine" : "0"
     },
     "read_only" : false,
     "read_only_alternatives" : [

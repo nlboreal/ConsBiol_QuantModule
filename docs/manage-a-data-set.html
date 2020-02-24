@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 3 Manage a data set | Conservation Biology - Quantitative Methods Module</title>
+  <meta name="description" content="This is the instructions on what to hand in as part of the Quantitative Methods Module in BIOL 4651/7794 (Conservation Biology II: Conservation in Practice)." />
+  <meta name="generator" content="bookdown 0.17 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 3 Manage a data set | Conservation Biology - Quantitative Methods Module" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="This is the instructions on what to hand in as part of the Quantitative Methods Module in BIOL 4651/7794 (Conservation Biology II: Conservation in Practice)." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 3 Manage a data set | Conservation Biology - Quantitative Methods Module" />
+  
+  <meta name="twitter:description" content="This is the instructions on what to hand in as part of the Quantitative Methods Module in BIOL 4651/7794 (Conservation Biology II: Conservation in Practice)." />
+  
+
+<meta name="author" content="Yolanda Wiersma" />
+
+
+<meta name="date" content="2020-02-24" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="using-r.html"/>
+<link rel="next" href="plotting-data.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">A Minimal Book Example</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="quantitative-methods-overview.html"><a href="quantitative-methods-overview.html"><i class="fa fa-check"></i><b>1</b> Quantitative Methods Overview</a></li>
+<li class="chapter" data-level="2" data-path="using-r.html"><a href="using-r.html"><i class="fa fa-check"></i><b>2</b> Using R</a></li>
+<li class="chapter" data-level="3" data-path="manage-a-data-set.html"><a href="manage-a-data-set.html"><i class="fa fa-check"></i><b>3</b> Manage a data set</a></li>
+<li class="chapter" data-level="4" data-path="plotting-data.html"><a href="plotting-data.html"><i class="fa fa-check"></i><b>4</b> Plotting Data</a></li>
+<li class="chapter" data-level="5" data-path="fitting-a-model.html"><a href="fitting-a-model.html"><i class="fa fa-check"></i><b>5</b> Fitting a model</a></li>
+<li class="chapter" data-level="6" data-path="other-sources-of-info.html"><a href="other-sources-of-info.html"><i class="fa fa-check"></i><b>6</b> Other sources of info</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Conservation Biology - Quantitative Methods Module</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="manage-a-data-set" class="section level1">
+<h1><span class="header-section-number">Chapter 3</span> Manage a data set</h1>
+<p>R is really useful for managing data. Here are some commands that come in handy frequently. The reference to “iris” is the built-in “iris” data set that comes automatically when you install the baseR package. Try out these commands by typing the code below into the console. <em>Write down what happens when you enter each command.</em></p>
+<p><code>data("iris")</code></p>
+<p><code>head(iris)</code></p>
+<p><code>dim(iris)</code></p>
+<p><code>str(iris)</code></p>
+<p><code>class(iris)</code></p>
+<p>Let’s say you want to create a new data frame from the “iris” data frame, but with only the data for flowers with a petal width greater than 0.3. Here’s what the command would look like:</p>
+<p><code>lg.petals &lt;- subset(iris, Petal.Width &gt; 0.3)</code></p>
+<p><em>How can you confirm this new data frame is a subset of the larger one?</em></p>
+<p><em>Your assignmnet</em> Create new data frames from the “iris” data set that contain the following. <em>Provide a copy of the code that you used to generate each new data frame and tell me how many rows are in each new data frame.</em> If you get stuck, start with the first year guide! Then try the “help” files (the guide includes a section on getting help).</p>
+<ol style="list-style-type: decimal">
+<li>A data frame with only flowers with Sepal Length less than 4.5</li>
+<li>A data frame with only flowers with Sepal Width greater than 3.3</li>
+<li><p>A data frame with only the species “setosa” (Warning - the “species” field is factor data, which means you need to treat it a little differently! Use the help files, or Google it!)</p></li>
+<li><p><strong>For graduate students (optional for keen undergraduates</strong>): Create a data frame of all species “setosa” that have Petal.Width great than 0.3. <em>Tell me how big this data frame is.</em></p></li>
+</ol>
+<p><strong>THIS IS WORTH 25% OF YOUR MARK FOR THIS MODULE.</strong></p>
+
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="using-r.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="plotting-data.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["QuantModule.pdf", "QuantModule.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

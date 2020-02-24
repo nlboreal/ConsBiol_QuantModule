@@ -1,0 +1,25 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1582578094000.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1464365979",
+    "id" : "E07267E1",
+    "lastKnownWriteTime" : 1582578119,
+    "last_content_update" : 1582578119137,
+    "path" : "~/BIOL4651/QuantMethodsModule/Module2020/QuantModuleR/ConsBiol_QuantModule/_bookdown.yml",
+    "project_path" : "_bookdown.yml",
+    "properties" : {
+        "cursorPosition" : "7,0",
+        "scrollLine" : "0"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 9,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "yaml"
+}
