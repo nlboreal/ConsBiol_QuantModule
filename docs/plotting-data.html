@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="" xml:lang="">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
 <head>
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 4 Plotting Data | Conservation Biology - Quantitative Methods Module</title>
   <meta name="description" content="This is the instructions on what to hand in as part of the Quantitative Methods Module in BIOL 4651/7794 (Conservation Biology II: Conservation in Practice)." />
-  <meta name="generator" content="bookdown 0.17 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.13 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 4 Plotting Data | Conservation Biology - Quantitative Methods Module" />
   <meta property="og:type" content="book" />
@@ -40,9 +40,6 @@
 <link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
-
-
 
 
 
@@ -101,8 +98,8 @@
 <p><code>x &lt;- iris$Sepal.Width</code></p>
 <p><code>y &lt;- iris$Sepal.Length</code></p>
 <p><em>Your assignment</em> Modify the graph you created above to show the three species with different symbols. There are different ways you can do this (<strong>HINT</strong> look at the goldfish data example in the first-year help manual).</p>
-<p>As an alternative to the way it’s done in the goldfish example in the first-year manual, you can use the <code>pch</code> (for symbol style) and <code>bg</code> (for background colour) arguments to specify three colours for the species. Here’s a snippet of the code that will assign the colours red, green and blue to the 3 factors in the data set: <code>pch = 21, bg = c("red", "green", "blue")</code> <strong>HINT</strong> insert this code into the <code>plot</code> function.</p>
-<p>To make a legend use this code: <code>legend(2, 7.5, pch= 16, leg.text, col = c("red", "green", "blue"))</code>. Experiment with changing the variables in this line of code to see what happens!</p>
+<p>As an alternative to the way it’s done in the goldfish example in the first-year manual, you can use the <code>pch</code> (for symbol style) and <code>bg</code> (for background colour) arguments to specify three colours for the species. Here’s a snippet of the code that will assign the colours red, green and blue to the 3 factors in the data set: <code>pch = 21, bg = c(&quot;red&quot;, &quot;green&quot;, &quot;blue&quot;)</code> <strong>HINT</strong> insert this code into the <code>plot</code> function.</p>
+<p>To make a legend use this code: <code>legend(2, 7.5, pch= 16, leg.text, col = c(&quot;red&quot;, &quot;green&quot;, &quot;blue&quot;))</code>. Experiment with changing the variables in this line of code to see what happens!</p>
 <p><em>For graduate students (optional for keen undergraduates</em>): Make a boxplot of sepal lengths by species. <strong>HINT</strong> you need to insert a formula of the form <code>y~grp</code> where <code>y</code> is a numerical vector of the data you want split into the boxplots and <code>grp</code> is the groupings you want to show on the x-axis (i.e., the factor data). Don’t forget meaningful axis labels!</p>
 <p><strong>THIS IS WORTH 30% OF YOUR MARK FOR THIS MODULE.</strong></p>
 
@@ -118,13 +115,11 @@
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/lunr.js"></script>
-<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
 <script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
 <script>
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
@@ -132,11 +127,12 @@ gitbook.start({
 "github": false,
 "facebook": true,
 "twitter": true,
+"google": false,
 "linkedin": false,
 "weibo": false,
 "instapaper": false,
 "vk": false,
-"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
 },
 "fontsettings": {
 "theme": "white",
@@ -148,10 +144,6 @@ gitbook.start({
 "text": null
 },
 "history": {
-"link": null,
-"text": null
-},
-"view": {
 "link": null,
 "text": null
 },

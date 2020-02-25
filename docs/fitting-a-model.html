@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="" xml:lang="">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
 <head>
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 5 Fitting a model | Conservation Biology - Quantitative Methods Module</title>
   <meta name="description" content="This is the instructions on what to hand in as part of the Quantitative Methods Module in BIOL 4651/7794 (Conservation Biology II: Conservation in Practice)." />
-  <meta name="generator" content="bookdown 0.17 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.13 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 5 Fitting a model | Conservation Biology - Quantitative Methods Module" />
   <meta property="og:type" content="book" />
@@ -40,9 +40,6 @@
 <link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
-
-
 
 
 
@@ -117,7 +114,7 @@
 <p>Note, you could also query the data to see what the range of real x values are by typing <code>range(iris$Sepal.Width)</code>.</p>
 <p>Then specify a range of values that fall within this for fitting the model. We’ll create a sequence called “xvalues” that ranges between 2 and 5 in increments of 0.1 using this code <code>xvalues &lt;- seq(2,5, 0.1)</code>. <strong>Aside</strong> you’ve probably been ignoring the other windows in R studio, but notice how the “xvalues” popped up in the “Environment” window and shows you the length of the vector and the first values.</p>
 <p>Then we use the <code>predict</code> function to create the model for these “xvalues” we just created, based on the “Sepal.model” you built with the glm.</p>
-<p><code>yvalues &lt;- predict(Sepal.Model, list(Sepal.Width = xvalues), type="response")</code></p>
+<p><code>yvalues &lt;- predict(Sepal.Model, list(Sepal.Width = xvalues), type=&quot;response&quot;)</code></p>
 <p>Then simply add the line of fit to your plot with <code>lines(xvalues, yvalues).</code></p>
 <p><strong>THIS IS WORTH 35% OF YOUR MARK FOR THIS MODULE.</strong></p>
 
@@ -133,13 +130,11 @@
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/lunr.js"></script>
-<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
 <script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
 <script>
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
@@ -147,11 +142,12 @@ gitbook.start({
 "github": false,
 "facebook": true,
 "twitter": true,
+"google": false,
 "linkedin": false,
 "weibo": false,
 "instapaper": false,
 "vk": false,
-"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
 },
 "fontsettings": {
 "theme": "white",
@@ -163,10 +159,6 @@ gitbook.start({
 "text": null
 },
 "history": {
-"link": null,
-"text": null
-},
-"view": {
 "link": null,
 "text": null
 },

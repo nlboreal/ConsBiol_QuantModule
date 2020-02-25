@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="" xml:lang="">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
 <head>
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 3 Manage a data set | Conservation Biology - Quantitative Methods Module</title>
   <meta name="description" content="This is the instructions on what to hand in as part of the Quantitative Methods Module in BIOL 4651/7794 (Conservation Biology II: Conservation in Practice)." />
-  <meta name="generator" content="bookdown 0.17 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.13 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 3 Manage a data set | Conservation Biology - Quantitative Methods Module" />
   <meta property="og:type" content="book" />
@@ -40,9 +40,6 @@
 <link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
-
-
 
 
 
@@ -98,7 +95,7 @@
 <div id="manage-a-data-set" class="section level1">
 <h1><span class="header-section-number">Chapter 3</span> Manage a data set</h1>
 <p>R is really useful for managing data. Here are some commands that come in handy frequently. The reference to “iris” is the built-in “iris” data set that comes automatically when you install the baseR package. Try out these commands by typing the code below into the console. <em>Write down what happens when you enter each command.</em></p>
-<p><code>data("iris")</code></p>
+<p><code>data(&quot;iris&quot;)</code></p>
 <p><code>head(iris)</code></p>
 <p><code>dim(iris)</code></p>
 <p><code>str(iris)</code></p>
@@ -127,13 +124,11 @@
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/lunr.js"></script>
-<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
 <script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
 <script>
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
@@ -141,11 +136,12 @@ gitbook.start({
 "github": false,
 "facebook": true,
 "twitter": true,
+"google": false,
 "linkedin": false,
 "weibo": false,
 "instapaper": false,
 "vk": false,
-"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
 },
 "fontsettings": {
 "theme": "white",
@@ -157,10 +153,6 @@ gitbook.start({
 "text": null
 },
 "history": {
-"link": null,
-"text": null
-},
-"view": {
 "link": null,
 "text": null
 },
